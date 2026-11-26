@@ -3,56 +3,137 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>시험지킴이 개인정보처리방침</title>
+<title>시험지킴이 개인정보처리방침 / Privacy Policy</title>
 <style>
-  body { font-family: -apple-system, "Malgun Gothic", "Noto Sans KR", sans-serif; max-width: 760px; margin: 0 auto; padding: 24px 18px 48px; color: #111827; line-height: 1.7; }
-  h1 { font-size: 24px; color: #0C447C; margin-bottom: 4px; }
-  h2 { font-size: 17px; margin-top: 28px; border-bottom: 1px solid #E5E7EB; padding-bottom: 4px; }
-  .meta { color: #6B7280; font-size: 14px; }
-  ul { padding-left: 20px; }
-  li { margin: 4px 0; }
-  .box { background: #F3F6FA; border-left: 4px solid #0C447C; padding: 10px 14px; margin-top: 16px; font-size: 14px; }
+  :root { --fg:#1f2d3a; --muted:#5b6b7a; --line:#e3e8ee; --accent:#0C447C; }
+  body { margin:0; background:#fff; color:var(--fg); font:15px/1.7 -apple-system, "Noto Sans KR", "Malgun Gothic", sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:28px 16px 60px; }
+  h1 { font-size:22px; margin:0 0 4px; } h2 { font-size:17px; margin:28px 0 8px; color:var(--accent); }
+  p, li { color:var(--fg); } .muted { color:var(--muted); font-size:13px; }
+  table { width:100%; border-collapse:collapse; font-size:14px; margin:8px 0; }
+  th, td { border:1px solid var(--line); padding:8px; text-align:left; vertical-align:top; }
+  th { background:#f5f8fa; } hr { border:0; border-top:1px solid var(--line); margin:40px 0; }
+  nav a { color:var(--accent); margin-right:12px; }
 </style>
 </head>
 <body>
+<main>
+<nav><a href="./">← 선우테크</a><a href="#ko">한국어</a><a href="#en">English</a></nav>
+
+<section id="ko">
 <h1>시험지킴이 개인정보처리방침</h1>
-<p class="meta">앱: 시험지킴이(ExamGuard, com.sunwootech.signalwatch) · 개발자: 선우테크 · 문의: cobolstar@gmail.com<br>
-시행일: 2026년 11월 26일</p>
+<p class="muted">시행일: 2026년 11월 26일 · 앱: 시험지킴이 (com.sunwootech.signalwatch)</p>
 
-<div class="box">시험지킴이는 시험 감독관이 시험장의 무선 신호를 확인하도록 돕는 수신 전용 앱입니다. 탐지 기록은 사용자의 기기 안에만 저장되며, 개발자는 이 기록을 받지 않습니다.</div>
+<p>선우테크(SUNWOOTECH, 이하 “개발자”)는 「시험지킴이」(이하 “앱”)를 이용하는 분과 앱이 신호를 받는 주변 사람의 개인정보를 소중히 다루며, 관련 법령을 지킵니다. 이 방침은 앱이 어떤 정보를 어떻게 다루는지 설명합니다.</p>
+<p>앱은 시험 감독관이 시험장의 블루투스·와이파이 신호를 확인하도록 돕는 <b>수신 전용</b> 감독 보조 앱입니다. 전파를 막거나 다른 기기에 연결하거나 통신 내용을 보지 않습니다.</p>
 
-<h2>1. 처리하는 정보</h2>
+<h2>1. 개발자가 직접 수집·보관하는 개인정보</h2>
+<p>앱은 회원가입이 없으며, <b>개발자가 운영하는 서버에 이용자의 개인정보나 탐지 기록을 저장하지 않습니다.</b> 탐지 기록, 리포트, 설정값은 이용자의 기기 안에만 저장됩니다.</p>
+
+<h2>2. 앱이 사용하는 정보와 목적</h2>
+<table>
+<tr><th>정보</th><th>사용 목적</th><th>처리 위치</th></tr>
+<tr><td>주변 무선 기기 정보 (블루투스·와이파이 기기 주소, 기기 이름, 신호 세기, 제조사 번호, 감지 시각)</td><td>시험 전 기준과 달라진 신호, AI 안경·초소형 카메라 등으로 보이는 신호를 찾아 감독관에게 알림</td><td>기기 안에서 계산·저장. 감독관이 '스캔 시작'을 누른 동안에만 받으며, 화면이 꺼져도 끊기지 않도록 상단 알림을 표시한 채(포그라운드 서비스) 검색하고, 정지하거나 자동 종료 시간이 되면 즉시 멈춥니다.</td></tr>
+<tr><td>위치 권한(정밀·대략)</td><td>안드로이드는 주변 블루투스·와이파이 검색 결과를 위치 정보로 취급하므로, 검색 결과를 받기 위해 필요</td><td>위치를 계속 추적하지 않습니다. 백그라운드 위치 권한은 요청하지 않습니다.</td></tr>
+<tr><td>시험장 좌표</td><td>리포트에 측정 장소(건물 단위) 기록</td><td>스캔을 시작할 때 기기에 마지막으로 알려진 위치를 한 번 읽어 기기 안 리포트에만 기록. GPS를 새로 켜지 않습니다.</td></tr>
+<tr><td>이용자가 입력한 정보 (시험장 이름, 감독관 이름, 안전 분류 메모, 좌석·위치 기록)</td><td>리포트·기록·팀 공유에 표시</td><td>기기 내부 저장소</td></tr>
+<tr><td>리포트·기록 (HTML·CSV)</td><td>시험 감독 기록 보관, 이용자가 선택한 공유</td><td>기기 내부 저장소와 다운로드/ExamGuard 폴더. 리포트의 기기 주소는 기본으로 가운데를 가립니다(예: AA:BB:**:**:**:FF). 공유는 이용자가 직접 선택한 앱으로만 전달</td></tr>
+<tr><td>카메라</td><td>시험장 점검 화면(렌즈 반사·적외선 보기)의 미리보기</td><td>미리보기만 하며 사진·영상을 저장하거나 전송하지 않습니다.</td></tr>
+<tr><td>구매 정보</td><td>프로 버전(1회 구매) 여부 확인</td><td>Google Play 결제. 카드 등 결제수단 정보는 개발자에게 전달되지 않습니다.</td></tr>
+<tr><td>광고 식별자 등</td><td>무료 버전의 광고 표시</td><td>Google AdMob (아래 4항)</td></tr>
+</table>
+
+<h2>3. 외부 전달</h2>
 <ul>
-  <li><b>주변 무선 기기 정보</b>: 블루투스·와이파이 기기의 주소(MAC), 기기 이름, 신호 세기, 제조사 정보, 감지 시각</li>
-  <li><b>시험장 위치</b>: 스캔을 시작할 때 기기에 마지막으로 알려진 위치 좌표(리포트 기록용). 위치를 계속 추적하지 않습니다.</li>
-  <li><b>사용자가 입력한 정보</b>: 시험실 이름, 감독관 이름, 안전 분류 메모, 위치(좌석) 기록</li>
-  <li><b>카메라</b>: 시험장 점검 화면의 미리보기에만 사용하며, 사진·영상을 저장하거나 전송하지 않습니다.</li>
-  <li><b>광고 식별자</b>: 무료 버전의 광고 표시를 위해 Google AdMob이 처리합니다.</li>
+<li><b>감독관 팀 공유</b>: 이용자가 켠 경우에만, 같은 와이파이(로컬망)에 연결되어 총괄 감독관이 승인한 다른 감독관 기기로 경고·탐지 요약을 보냅니다. 인터넷 서버를 거치지 않습니다.</li>
+<li><b>리포트 공유</b>: 이용자가 직접 공유를 선택한 경우에만 선택한 앱(메일·메신저 등)으로 전달됩니다.</li>
+<li><b>학습 규칙 제보</b>: 이용자가 직접 보내기를 누른 경우에만 메일 앱으로 전달되며, 기기 주소는 들어가지 않습니다.</li>
+<li><b>Google AdMob</b>(광고)과 <b>Google Play 결제</b>(프로 구매)는 각 회사의 개인정보처리방침을 따릅니다.</li>
 </ul>
 
-<h2>2. 처리 목적</h2>
-<p>시험장 안의 반입 금지 전자기기 탐지 보조, 시험 감독 리포트 작성, 무료 버전의 광고 표시</p>
+<h2>4. 광고 (Google AdMob)</h2>
+<p>무료 버전에는 기록·리포트 화면 아래에 Google AdMob 배너 광고가 표시됩니다. 감시(스캔) 중에는 광고를 띄우지 않습니다. AdMob은 광고 제공과 성과 측정을 위해 광고 ID, 기기 정보, IP 기반 대략적 위치, 광고 상호작용 정보를 수집할 수 있습니다. 기기의 [설정 → 개인정보 보호 → 광고]에서 광고 ID를 재설정하거나 삭제할 수 있습니다. 프로 버전에서는 광고가 표시되지 않습니다.</p>
+<p class="muted">Google의 정보 처리: https://policies.google.com/technologies/partner-sites</p>
 
-<h2>3. 보관과 삭제</h2>
-<p>모든 탐지 기록과 리포트는 사용자의 기기 안(앱 저장공간과 다운로드/ExamGuard 폴더)에만 저장되며 개발자에게 전송되지 않습니다. 설정의 '기록 보관 기간'이 지난 기록은 자동으로 지워지고, 기록 화면에서 직접 지우거나 앱을 삭제해 언제든 지울 수 있습니다. 다운로드 폴더에 저장한 파일은 사용자가 직접 지워야 합니다.</p>
-
-<h2>4. 외부 전달</h2>
+<h2>5. 앱 권한</h2>
 <ul>
-  <li><b>감독관 팀 공유</b>: 사용자가 켠 경우에만, 같은 와이파이(로컬망)에 연결되어 승인된 다른 감독관 기기로 탐지 요약을 보냅니다. 인터넷 서버를 거치지 않습니다.</li>
-  <li><b>리포트 공유</b>: 사용자가 직접 공유를 선택한 경우에만 선택한 앱으로 전달됩니다.</li>
-  <li><b>Google AdMob</b>(광고)과 <b>Google Play 결제</b>(프로 구매)는 각 회사의 개인정보처리방침을 따릅니다.</li>
+<li>위치(정밀·대략), 포그라운드 서비스(위치): 주변 블루투스·와이파이 기기 검색 결과 수신과 화면이 꺼진 동안의 계속 검색 — 거부하면 검색 결과를 받을 수 없습니다.</li>
+<li>근처 기기(블루투스 검색·연결 정보), 근처 와이파이 기기: 주변 기기 검색, 이 폰에 페어링된 감독관 기기를 자동으로 안전 분류</li>
+<li>알림: 경고와 "스캔 중" 표시</li>
+<li>카메라: 시험장 점검 미리보기(선택)</li>
+<li>인터넷·네트워크 상태: 팀 공유(로컬망)·광고·결제</li>
+<li>진동, 화면 꺼짐 방지: 경고 진동, 시험 시간 동안 검색 유지</li>
+<li>광고 ID: 무료 버전 광고(AdMob)</li>
 </ul>
 
-<h2>5. 주변 기기 정보에 대해</h2>
-<p>앱이 받는 신호는 주변 기기가 스스로 내보내는 공개 신호입니다. 신호만으로는 기기 소유자를 알 수 없으며, 앱은 소유자 식별을 시도하지 않고 기기에 연결하거나 통신 내용을 보지 않습니다. 감독 기관은 내부 규정에 따라 기록을 보관·파기해 주세요. 리포트를 밖으로 보낼 때는 설정의 '기기 주소 가리기'를 권장합니다.</p>
+<h2>6. 주변 기기 정보에 대해</h2>
+<p>앱이 받는 신호는 주변 기기가 스스로 내보내는 공개 신호입니다. 신호만으로는 기기 소유자를 알 수 없으며, 앱은 소유자 식별을 시도하지 않고 기기에 연결하거나 통신 내용을 보지 않습니다. 무선 신호는 기기가 '어느 근처'에 있는지까지만 알려 주므로, 앱은 특정 응시자를 지목하지 말고 시험장 전체 공지로 대응하도록 안내합니다. 감독 기관은 내부 규정에 따라 기록을 보관·파기해 주세요.</p>
 
-<h2>6. 아동</h2>
-<p>이 앱은 시험 감독관(성인)용이며 아동을 대상으로 하지 않습니다.</p>
+<h2>7. 보관 기간과 삭제</h2>
+<p>앱 안 기록은 설정의 '기록 보관 기간'(기본 90일)이 지나면 자동으로 지워지고, 기록 화면에서 직접 지우거나 앱을 삭제하면 함께 삭제됩니다. 다운로드/ExamGuard 폴더에 저장한 파일은 이용자가 직접 지워야 합니다. 개발자 서버에는 보관하는 개인정보가 없습니다.</p>
 
-<h2>7. 방침의 변경</h2>
-<p>내용이 바뀌면 이 페이지와 앱 안 개인정보처리방침에 시행일과 함께 알립니다.</p>
+<h2>8. 아동</h2>
+<p>앱은 시험 감독관(성인)용이며 만 14세 미만 아동을 대상으로 하지 않고, 아동의 개인정보를 알면서 수집하지 않습니다.</p>
 
-<h2>8. 문의</h2>
-<p>선우테크 · <a href="mailto:cobolstar@gmail.com">cobolstar@gmail.com</a></p>
+<h2>9. 개발자 정보 및 문의</h2>
+<table>
+<tr><th>상호</th><td>선우테크 (SUNWOOTECH)</td></tr>
+<tr><th>사업자등록번호</th><td>291-28-00667</td></tr>
+<tr><th>주소</th><td>서울특별시 금천구 가산디지털2로 173, 9층 912호 (가산동, 에이스비즈포레)</td></tr>
+<tr><th>대표 · 개인정보 보호책임자</th><td>이현철</td></tr>
+<tr><th>개인정보 관련 문의</th><td>cobolstar@gmail.com</td></tr>
+</table>
+
+<h2>10. 변경</h2>
+<p>이 방침이 바뀌면 이 페이지와 앱 안 개인정보처리방침에 시행일과 함께 게시합니다.</p>
+</section>
+
+<hr>
+
+<section id="en">
+<h1>ExamGuard (시험지킴이) Privacy Policy</h1>
+<p class="muted">Effective: November 26, 2026 · App: ExamGuard (com.sunwootech.signalwatch)</p>
+
+<p>SUNWOOTECH (“the developer”) respects the privacy of users of ExamGuard (“the app”) and of people near the devices whose signals the app receives. The app is a <b>receive-only</b> tool that helps exam proctors check Bluetooth and Wi-Fi signals in an exam room. It does not jam signals, connect to other devices, or read any communication content.</p>
+
+<h2>1. Data collected by the developer</h2>
+<p>There is no sign-up, and <b>the developer does not store any personal data or detection records on its servers.</b> Detection records, reports and settings stay on the user's device.</p>
+
+<h2>2. Data the app uses</h2>
+<table>
+<tr><th>Data</th><th>Purpose</th><th>Where it is processed</th></tr>
+<tr><td>Nearby wireless device information (Bluetooth/Wi-Fi addresses, device names, signal strength, manufacturer IDs, time seen)</td><td>Find signals that appeared after the pre-exam baseline and signals that look like AI glasses, hidden cameras and similar devices</td><td>On the device only. Collected only while the proctor has started a scan, shown with an ongoing notification (foreground service), and stopped when the proctor stops it or the auto-stop time is reached.</td></tr>
+<tr><td>Location permission (precise/approximate)</td><td>Android treats nearby Bluetooth/Wi-Fi scan results as location data, so this permission is required to receive them</td><td>Location is not tracked. Background location permission is not requested.</td></tr>
+<tr><td>Exam site coordinates</td><td>Record the venue (building level) in the report</td><td>The last known location is read once when a scan starts and saved only in the on-device report. GPS is not turned on.</td></tr>
+<tr><td>Information entered by the user (exam room name, proctor name, notes, seat records)</td><td>Shown in reports, history and team sharing</td><td>On the device</td></tr>
+<tr><td>Reports and history (HTML/CSV)</td><td>Keep exam supervision records; share when the user chooses</td><td>On the device and in Downloads/ExamGuard. Device addresses in reports are partly masked by default. Shared only to apps the user selects.</td></tr>
+<tr><td>Camera</td><td>Preview for the exam room inspection screen</td><td>Preview only; no photos or videos are saved or sent.</td></tr>
+<tr><td>Purchase information</td><td>Check whether Pro (one-time purchase) is owned</td><td>Google Play Billing. Payment details are not shared with the developer.</td></tr>
+<tr><td>Advertising ID and related data</td><td>Show ads in the free version</td><td>Google AdMob (section 4)</td></tr>
+</table>
+
+<h2>3. Sharing</h2>
+<ul>
+<li><b>Proctor team sharing</b>: only when turned on, alerts and summaries are sent over the same local Wi-Fi network to other proctor devices approved by the lead proctor. No internet server is involved.</li>
+<li><b>Report sharing</b> and <b>rule reports</b>: only when the user chooses to share, to the app the user selects. Rule reports contain no device addresses.</li>
+<li><b>Google AdMob</b> and <b>Google Play Billing</b> follow their own privacy policies.</li>
+</ul>
+
+<h2>4. Ads (Google AdMob)</h2>
+<p>The free version shows AdMob banner ads at the bottom of the history and report screens, never during a scan. AdMob may collect the advertising ID, device information, approximate location based on IP, and ad interaction data. You can reset or delete the advertising ID in your device settings. Pro users see no ads.</p>
+
+<h2>5. Retention and deletion</h2>
+<p>In-app records are deleted automatically after the retention period in settings (90 days by default), or when deleted in the app or when the app is uninstalled. Files saved to Downloads/ExamGuard must be deleted by the user.</p>
+
+<h2>6. Children</h2>
+<p>The app is for exam proctors (adults) and is not directed to children under 14.</p>
+
+<h2>7. Contact</h2>
+<p>SUNWOOTECH · Business registration no. 291-28-00667 · 9F 912, 173 Gasan digital 2-ro, Geumcheon-gu, Seoul, Korea · Representative and privacy officer: 이현철 · cobolstar@gmail.com</p>
+
+<h2>8. Changes</h2>
+<p>Changes to this policy will be posted on this page with the effective date.</p>
+</section>
+</main>
 </body>
 </html>
